@@ -22,3 +22,7 @@ def save_audio_to_file(audio_bytes, filename):
     """
     with open(filename, 'wb') as f:
         f.write(audio_bytes.getbuffer())
+
+def text_to_audio(pront,filename, lang='en'):
+    byte = text_to_speech(pront,lang)
+    save_audio_to_file(byte,filename)
