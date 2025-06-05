@@ -1,2 +1,3 @@
-import importlib
-module = importlib.import_module("voice/gtts.py")
+import easytts
+
+easytts.save_audio_to_file(easytts.text_to_speech("hello world"),"test.mp3")
